@@ -1,7 +1,7 @@
 {
   "name": "@appjumpstart/mercury-webpack",
   "version": "1.0.0",
-  "description": "An Express/Connect-compatible middleware for easy Webpack development with hot module replacement",
+  "description": "An Express/Connect-compatible middleware for easy webpack development with hot module replacement",
   "main": "index.js",
   "directories": {
     "test": "tests"
@@ -9,7 +9,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "webpack",
+    "dev",
+    "hot",
+    "middleware",
+    "hot module replacement",
+    "express",
+    "connect",
+    "mercury"
+  ],
   "author": "Ian Walter <public@iankwalter.com> (https://iankwalter.com)",
   "license": "ISC",
   "dependencies": {
