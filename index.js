@@ -41,7 +41,7 @@ module.exports = function mecuryWebpack (options) {
     // the clientManifest and renderer whenever the clientCompiler has
     // finished a compile run.
     clientConfig.entry = [
-      join(__dirname, 'node_modules/webpack-hot-middleware/client'),
+      join(__dirname, 'node_modules/webpack-hot-middleware/client.js'),
       clientConfig.entry
     ]
     const clientCompiler = webpack(clientConfig)
