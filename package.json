@@ -1,6 +1,6 @@
 {
   "name": "@appjumpstart/mercury-webpack",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "An Express/Connect-compatible middleware for easy webpack development with hot module replacement",
   "main": "index.js",
   "directories": {
