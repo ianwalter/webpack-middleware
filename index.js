@@ -40,10 +40,18 @@ module.exports = function mecuryWebpack (options) {
     // Webpack configuration. Add a plugin to the clientCompiler that updates
     // the clientManifest and renderer whenever the clientCompiler has
     // finished a compile run.
-    clientConfig.entry = [
-      join(__dirname, 'client.js'),
-      clientConfig.entry
-    ]
+    const isMutliConfig = Array.isArray(clientConfig)
+    if (isMutliConfig) {
+      clientConfig.map(config => (config.entry = [
+        join(__dirname, 'client.js'),
+        config.entry
+      ]))
+    } else {
+      clientConfig.entry = [
+        join(__dirname, 'client.js'),
+        clientConfig.entry
+      ]
+    }
     const clientCompiler = webpack(clientConfig)
     clientCompiler.plugin('done', () => clientHook(devMiddleware))
     hotMiddleware = WebpackHotMiddleware(clientCompiler, { reload: true })
@@ -51,8 +59,12 @@ module.exports = function mecuryWebpack (options) {
     // Create the WebpackDevMiddleware instance using the clientCompiler.
     // Configure it to use the passed logger and the given stats configuration
     // if it's defined.
+    const getPublicPath = c => c.output ? c.output.publicPath : '/'
+    const publicPath = isMutliConfig
+      ? getPublicPath(clientConfig[0])
+      : getPublicPath(clientConfig)
     devMiddleware = WebpackDevMiddleware(clientCompiler, {
-      publicPath: clientConfig.output.publicPath,
+      publicPath,
       logger,
       ...(stats !== undefined ? { stats } : {})
     })
