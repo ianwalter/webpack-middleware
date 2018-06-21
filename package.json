@@ -22,10 +22,11 @@
   "author": "Ian Walter <public@iankwalter.com> (https://iankwalter.com)",
   "license": "ISC",
   "dependencies": {
+    "common-tags": "^1.8.0",
     "memory-fs": "^0.4.1",
     "webpack": "^4.5.0",
     "webpack-dev-middleware": "^3.1.2",
-    "webpack-hot-middleware": "^2.21.2"
+    "webpack-hot-client": "^4.0.3"
   },
   "devDependencies": {
     "jest": "^22.4.3",
