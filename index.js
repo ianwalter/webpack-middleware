@@ -24,8 +24,8 @@ module.exports = function mecuryWebpack (options) {
   let serverCheckErr
   let devMiddleware
   if (development) {
-    // Create an error message for the case when the hot client server hasn't
-    // TODO:
+    // Create an error message for the case when the Hot Client server hasn't
+    // started listening after the max number of check attempts.
     serverCheckErr = new Error(oneLineTrim`
       Hot Client server was not listening after
       ${serverCheckAttempts * 100 / 1000}s.
@@ -42,11 +42,14 @@ module.exports = function mecuryWebpack (options) {
       serverCompiler.watch({}, () => serverHook(mfs))
     }
 
-    // TODO:
+    // Create the client Webpack compiler instance and add a plugin that calls
+    // the clientHook after each compilation is done.
     const clientCompiler = webpack(clientConfig)
     clientCompiler.plugin('done', () => clientHook(devMiddleware))
 
-    // TODO:
+    // Create the Hot Client instance and add a callback to the server so that
+    // the WebpackDevMiddleware instance is created after the server has started
+    // listening.
     const { server } = hotClient(clientCompiler)
     server.on('listening', () => {
       // Create the WebpackDevMiddleware instance using the clientCompiler.
