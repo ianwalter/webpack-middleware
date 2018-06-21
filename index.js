@@ -5,6 +5,7 @@ const webpack = require('webpack')
 
 const { NODE_ENV } = process.env
 const noOp = () => {}
+const clientPath = join(__dirname, 'client.js')
 
 module.exports = function mecuryWebpack (options) {
   const {
@@ -42,15 +43,13 @@ module.exports = function mecuryWebpack (options) {
     // finished a compile run.
     const isMutliConfig = Array.isArray(clientConfig)
     if (isMutliConfig) {
-      clientConfig.map(config => (config.entry = [
-        join(__dirname, 'client.js'),
-        config.entry
-      ]))
+      clientConfig.forEach(config => {
+        if (!config.entry.includes(clientPath)) {
+          config.entry = [clientPath, config.entry]
+        }
+      })
     } else {
-      clientConfig.entry = [
-        join(__dirname, 'client.js'),
-        clientConfig.entry
-      ]
+      clientConfig.entry = [clientPath, clientConfig.entry]
     }
     const clientCompiler = webpack(clientConfig)
     clientCompiler.plugin('done', () => clientHook(devMiddleware))
