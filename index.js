@@ -18,7 +18,7 @@ module.exports = function mecuryWebpack (options) {
     stats,
     // The max amount of 100ms attempts that the middleware should attempt to
     // wait for the hot server to start listening.
-    serverCheckAttempts = 600,
+    serverCheckAttempts = 600
   } = options
 
   let serverCheckErr

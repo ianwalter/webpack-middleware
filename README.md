@@ -1,3 +1,9 @@
 # mercury-webpack
 > An Express/Connect-compatible middleware for easy webpack development with
 > hot module replacement
+
+## License
+
+Apache 2.0 with Commons Clause - See [LICENSE][licenseUrl]
+
+[licenseUrl]: https://github.com/appjumpstart/mercury-webpack/blob/master/LICENSE
