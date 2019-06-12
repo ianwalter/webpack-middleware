@@ -67,7 +67,7 @@ module.exports = function mecuryWebpack (options) {
     })
   }
 
-  return function mercuryWebpackMiddleware (req, res, next) {
+  return function webpackMiddleware (req, res, next) {
     if (development) {
       if (devMiddleware) {
         // If devMiddleware exists, use it as middleware.
