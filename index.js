@@ -7,7 +7,7 @@ const { oneLineTrim } = require('common-tags')
 const { NODE_ENV } = process.env
 const noOp = () => {}
 
-module.exports = function mecuryWebpack (options) {
+module.exports = function webpackMiddleware (options) {
   const {
     serverConfig,
     serverHook = noOp,
@@ -67,7 +67,7 @@ module.exports = function mecuryWebpack (options) {
     })
   }
 
-  return function webpackMiddleware (req, res, next) {
+  return function middleware (req, res, next) {
     if (development) {
       if (devMiddleware) {
         // If devMiddleware exists, use it as middleware.

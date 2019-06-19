@@ -14,8 +14,7 @@
     "middleware",
     "hot module replacement",
     "express",
-    "connect",
-    "mercury"
+    "connect"
   ],
   "author": "Ian Walter <public@iankwalter.com> (https://iankwalter.com)",
   "license": "SEE LICENSE IN LICENSE",
