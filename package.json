@@ -1,6 +1,6 @@
 {
   "name": "@ianwalter/webpack-middleware",
-  "version": "2.0.1",
+  "version": "3.0.0-0",
   "description": "An Express/Connect-compatible middleware for easy webpack development with hot module replacement",
   "main": "index.js",
   "scripts": {
