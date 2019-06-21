@@ -26,7 +26,7 @@
     "webpack-hot-client": "^4.1.1"
   },
   "devDependencies": {
-    "@ianwalter/bff": "^6.1.0",
+    "@ianwalter/bff": "^6.2.0",
     "@ianwalter/eslint-config": "^2.0.1",
     "@ianwalter/renovate-config": "^1.1.0",
     "np": "^5.0.3"
