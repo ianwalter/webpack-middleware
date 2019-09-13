@@ -5640,10 +5640,10 @@ webpack-dev-middleware@^3.7.0:
     range-parser "^1.2.1"
     webpack-log "^2.0.0"
 
-webpack-hot-client@^4.1.1:
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/webpack-hot-client/-/webpack-hot-client-4.1.1.tgz#fc02b396749d5fd26c4f2265567e2fc1521a41ff"
-  integrity sha512-Gu3hEkFJIsvC+2Dg86FvAzIL8KSR88Ptk0QnV4wEucObB0c9aMIYbjSA9oPTV4X5OZRH6ftrk4FcSGsZmTLiWA==
+webpack-hot-client@^4.1.2:
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/webpack-hot-client/-/webpack-hot-client-4.1.2.tgz#3088c5533e021dd579fce8428235955248ed6a6c"
+  integrity sha512-J0qt5mxEOt9UAQkyQ59Mz0n9Sk4NWKJ4awVE5/idmG2vOHVjseczbY9hbdzHV3NyNllufhN2USvSJK5FUBFbeg==
   dependencies:
     "@webpack-contrib/schema-utils" "^1.0.0-beta.0"
     json-stringify-safe "^5.0.1"
