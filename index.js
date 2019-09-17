@@ -7,7 +7,7 @@ const { oneLineTrim } = require('common-tags')
 const { NODE_ENV } = process.env
 const noOp = () => {}
 
-module.exports = function mecuryWebpack (options) {
+module.exports = function webpackMiddleware (options) {
   const {
     serverConfig,
     serverHook = noOp,
@@ -67,7 +67,7 @@ module.exports = function mecuryWebpack (options) {
     })
   }
 
-  return function webpackMiddleware (req, res, next) {
+  return function middleware (req, res, next) {
     if (development) {
       if (devMiddleware) {
         // If devMiddleware exists, use it as middleware.
@@ -80,7 +80,7 @@ module.exports = function mecuryWebpack (options) {
         // Check for the devMiddleware to be defined in 100ms intervals up until
         // the max number of attempts is reached.
         let attempts = 0
-        let serverCheckInterval = setInterval(() => {
+        const serverCheckInterval = setInterval(() => {
           attempts++
           if (devMiddleware) {
             clearInterval(serverCheckInterval)

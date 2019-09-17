@@ -1,6 +1,6 @@
 {
   "name": "@ianwalter/webpack-middleware",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "description": "An Express/Connect-compatible middleware for easy webpack development with hot module replacement",
   "main": "index.js",
   "scripts": {
@@ -14,26 +14,24 @@
     "middleware",
     "hot module replacement",
     "express",
-    "connect",
-    "mercury"
+    "connect"
   ],
   "author": "Ian Walter <public@iankwalter.com> (https://iankwalter.com)",
   "license": "SEE LICENSE IN LICENSE",
   "dependencies": {
     "common-tags": "^1.8.0",
     "memory-fs": "^0.4.1",
-    "webpack": "^4.33.0",
-    "webpack-dev-middleware": "^3.7.0",
-    "webpack-hot-client": "^4.1.1"
+    "webpack": "^4.40.2",
+    "webpack-dev-middleware": "^3.7.1",
+    "webpack-hot-client": "^4.1.2"
   },
   "devDependencies": {
-    "@ianwalter/bff": "^5.2.1",
-    "@ianwalter/eslint-config": "^2.0.1",
-    "@ianwalter/renovate-config": "^1.1.0",
-    "@ianwalter/test-server": "^1.4.3",
-    "got": "^9.6.0",
-    "koa-connect": "^2.0.1",
-    "np": "^5.0.3"
+    "@ianwalter/bff": "^6.5.0",
+    "@ianwalter/eslint-config": "^2.4.0",
+    "@ianwalter/release": "^3.0.3",
+    "@ianwalter/renovate-config": "^1.2.0",
+    "@ianwalter/requester": "^1.2.1",
+    "@ianwalter/test-server": "^2.0.1"
   },
   "eslintConfig": {
     "root": true,
