@@ -80,7 +80,7 @@ module.exports = function webpackMiddleware (options) {
         // Check for the devMiddleware to be defined in 100ms intervals up until
         // the max number of attempts is reached.
         let attempts = 0
-        let serverCheckInterval = setInterval(() => {
+        const serverCheckInterval = setInterval(() => {
           attempts++
           if (devMiddleware) {
             clearInterval(serverCheckInterval)
